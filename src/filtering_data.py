@@ -1,10 +1,10 @@
 import pandas as pd
 
 def get_dataframe():
-  abs_path = '../'
-  invalid_1 = pd.read_csv(abs_path + "data/random_str.csv", delimiter=',')
-  invalid_0 = pd.read_csv(abs_path + "data/vie/spam.csv", delimiter=';')
-  semantic = pd.read_csv(abs_path + "data/vie/valid_idea.csv", delimiter=';', usecols=['sentence', 'spam'])
+  # abs_path = '../'
+  invalid_1 = pd.read_csv("data/random_str.csv", delimiter=',')
+  invalid_0 = pd.read_csv("data/vie/spam.csv", delimiter=';')
+  semantic = pd.read_csv("data/vie/valid_idea.csv", delimiter=';', usecols=['sentence', 'spam'])
 
   invalid_0.head()
   invalid_1.head()
@@ -23,9 +23,9 @@ def get_data_by_column(col: str = None, df = None):
   return df[col] if col else df
 
 def get_db():
-  abs_path = '../'
+  # abs_path = '../'
   # invalid_1 = pd.read_csv(abs_path + "data/random_str.csv", delimiter=',')
   # invalid_0 = pd.read_csv(abs_path + "data/vie/spam.csv", delimiter=';')
-  semantic = pd.read_csv(abs_path + "data/vie/valid_idea.csv", delimiter=';', usecols=['sentence', 'spam'])
+  semantic = pd.read_csv("data/vie/valid_idea.csv", delimiter=';', usecols=['sentence', 'spam'])
   
   return semantic

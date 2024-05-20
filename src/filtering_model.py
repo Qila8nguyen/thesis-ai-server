@@ -1,6 +1,6 @@
 import numpy as np
 import json
-# import tensorflow as tf
+import tensorflow as tf
 # from tensorflow.keras.models import load_model
 # from tensorflow.keras.preprocessing.text import Tokenizer
 # from tensorflow.keras.preprocessing.text import Tokenizer
@@ -26,6 +26,9 @@ gibberish_path='model/gibberish.vie.model'
 filtering_model_path = 'model/saved_model.keras'
 max_words = 1000
 max_len = 150
+
+import os
+os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
 
 class IdeaTokenize:
   def __init__(self) -> None:
