@@ -1,3 +1,12 @@
+# Deloy
+```
+cd src
+
+sudo docker build -t thesis:v1 .
+
+sudo docker run -p 8000:8000 thesis:v1
+```
+# Run
 ```
 cd src
 
@@ -7,8 +16,7 @@ pyenv activate myenv
 pip install -r requirements.txt
 uvicorn main:app --reload
 ```
-
-http://localhost:8080
+# Test
 
 ```
 curl --location --request GET 'http://localhost:8000/spam_filtering' \
