@@ -1,0 +1,9 @@
+{
+  "domain": [
+      "Phần mềm (Software)"
+  ],
+  "problem": "\"Những hệ thống đăng tải ý tưởng ngày nay chưa đáp ứng đủ nhu cầu của nhà sáng tạo. Các ý tưởng đăng lên nhưng không quá chú trọng về nội dung mà chỉ quan tâm đến số lượng.\"",
+  "acceptance_criteria": "\"Hiện thực một hệ thống mới giúp người dùng có thể đăng tải những ý tưởng sáng kiến của bản thân về một vấn đề gì đó trong cuộc sống. Ở đây, các ý tưởng với độ hoàn thiện và được đánh giá cao sẽ có khả năng lớn trong việc kết hợp với doanh nghiệp trong ngành liên quan\"",
+  "constraints": "",
+  "_id": "65509e7e35a5fe8ab15550a0"
+}

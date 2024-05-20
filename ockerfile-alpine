@@ -1,0 +1,70 @@
+# 
+FROM --platform=linux/amd64 python:3.10.14-alpine
+
+# Set environment variables to prevent Python from writing .pyc files and buffering stdout/stderr
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
+
+# Install necessary dependencies
+RUN apk add --no-cache \
+    build-base \
+    git \
+    wget \
+    bash \
+    curl \
+    clang \
+    freetype-dev \
+    libpng-dev \
+    openblas-dev \
+    lapack-dev \
+    python3-dev \
+    py3-numpy-dev \
+    py3-wheel \
+    py3-matplotlib \hdf5-dev \
+    py3-scikit-learn \
+    py3-scipy \
+    py3-starlette 
+
+WORKDIR /code
+
+# Install Bazelisk
+RUN curl -Lo /usr/local/bin/bazelisk https://github.com/bazelbuild/bazelisk/releases/latest/download/bazelisk-linux-amd64 && \
+    chmod +x /usr/local/bin/bazelisk
+
+# Clone TensorFlow repository
+# --depth 1: This option specifies that you want a shallow clone with a history truncated
+RUN git clone --branch v2.15.0 https://github.com/tensorflow/tensorflow.git --depth 1 /tensorflow
+
+# Set environment variables to accept default options for TensorFlow build
+ENV TF_NEED_CUDA=0
+ENV TF_NEED_TENSORRT=0
+ENV TF_NEED_OPENCL_SYCL=0
+
+
+# Build and install TensorFlow
+RUN cd /tensorflow && \
+    ./configure && \
+    bazelisk build --config opt //tensorflow/tools/pip_package:build_pip_package && \
+    ./bazel-bin/tensorflow/tools/pip_package/build_pip_package /tmp/tensorflow_pkg 
+
+# Install TensorFlow
+RUN pip install /tmp/tensorflow_pkg/*.whl
+
+# Clean up
+RUN rm -rf /tensorflow /tmp/tensorflow_pkg
+
+
+# 
+COPY ./requirements.txt /code/requirements.txt
+
+# 
+RUN pip3 install --no-cache-dir -r /code/requirements.txt
+
+# 
+COPY . /code
+
+# Make port 80 available to the world outside this container
+EXPOSE 8000
+
+# Run uvicorn server with --reload
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]

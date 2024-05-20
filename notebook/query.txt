@@ -1,0 +1,58 @@
+Với những từ khóa sau đây:
+ 'Viễn thông (Telecommunications)',
+ 'Chăm sóc sức khỏe (Healthcare)',
+ 'Dịch vụ tài chính và Quản lí tài chính(Financial Services)',
+ 'Kinh doanh buôn bán (Sales)',
+ 'Ô tô (Automotive)',
+ 'Năng lượng (Energy)',
+ 'Giải trí và truyền thông (Entertainment and Media)',
+ 'Vận tải và Logistics (Transportation and Logistics)',
+ 'Bất động sản (Real Estate)',
+ 'Lưu trú và Du lịch (Hospitality and Tourism)',
+ 'Giáo dục (Education)',
+ 'Nông nghiệp (Agriculture)',
+ 'Dược phẩm (Pharmaceuticals)',
+ 'Xây dựng (Construction)',
+ 'Thương mại điện tử (E-commerce)',
+ 'Trò chơi điện tử và Esports (Gaming)',
+ 'Công nghệ Sinh học (Biotechnology)',
+ 'Hóa chất (Chemicals)',
+ 'Thời trang và May mặc (Fashion and Apparel)',
+ 'Sức khỏe và Làm đẹp (Health and Wellness)',
+ 'Mạng xã hội (Social Media)',
+ 'Trí tuệ nhân tạo (Artificial Intelligence)',
+ 'Tiền mã hóa và Blockchain (Cryptocurrency and Blockchain)',
+ 'Thực phẩm và Đồ uống (Food and Beverage)',
+ 'Dược phẩm và Dịch vụ chăm sóc sức khỏe (Pharmaceuticals and Healthcare Services)',
+ 'Dịch vụ Môi trường (Environmental Services)',
+ 'Truyền thông và Quảng cáo (Media and Advertising)',
+ 'Dịch vụ Luật sư (Legal Services)',
+ 'Năng lượng tái tạo (Renewable Energy)',
+ 'Nghiên cứu thị trường (Market Research)',
+ 'Quốc phòng và An ninh (Defense and Security)',
+ 'Sở hữu trí tuệ (Intellectual Property)',
+ 'Robotics và Tự động hóa (Robotics and Automation)',
+ 'Công nghệ vũ trụ và Hàng không vũ trụ',
+ 'Thể thao và Thể dục (Sports and Fitness)',
+ 'Thực tế tăng cường (Augmented Reality) và Thực tế ảo (Virtual Reality)',
+ 'Tự động hóa nhà và Thiết bị thông minh (Home Automation and Smart Devices)',
+ 'Công nghệ tài chính (Financial Technology)',
+ 'Nhân sự và Quản lý tài năng (Human Resources and Talent Management)',
+ 'Nghệ thuật và Văn hóa (Art and Culture)',
+ 'Âm nhạc và Phát trực tuyến (Music and Streaming)',
+ 'Công nghệ pháp lý (Legal Technology)',
+ 'Hợp tác và Giao tiếp trong nơi làm việc (Workplace Collaboration and Communication)',
+ 'Đầu tư',
+ 'Giao thông thông minh',
+ 'Bảo mật mạng (Cybersecurity)',
+
+Hãy phân loại tất cả đoạn văn (không được rút gọn) dưới đấy theo chủ đề gần nhất trong các từ khóa trên
+===============================================================
+
+===================================================================
+Lưu ý: tất cả đoạn văn phải được phân loại đúng vào 1 trong các chủ đề trên, chỉ trả lời đúng yêu cầu được giao và không đưa ra các bình luận khác
+FORMAT CHO CÁC CÂU TRẢ LỜI: 
+ Đoạn văn (không rút gọn) - Chủ đề (không rút gọn)
+.
+.
+.
