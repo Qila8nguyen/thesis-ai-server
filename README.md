@@ -4,7 +4,7 @@ cd src
 pyenv virtualenv 3.10.0 myenv
 pyenv activate myenv
 
-pip install -r requirements_1.txt
+pip install -r requirements.txt
 uvicorn main:app --reload
 ```
 
