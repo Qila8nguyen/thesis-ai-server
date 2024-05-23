@@ -19,7 +19,8 @@ def spam_filtering(idea: Idea):
 def search_topk_similarity(req: Requirement):
   try:
     query = f'{req.problem}. {req.acceptance_criteria}'
-    topk_id = topk_idea_search(query)
+    top = req.top
+    topk_id = topk_idea_search(query, top)
     result = {
       "_id": req.id,
       "rank": topk_id
@@ -30,11 +31,12 @@ def search_topk_similarity(req: Requirement):
     raise HTTPException(status_code=500, detail="An unexpected error occurred")
 
 
-@app.get("/topk_internal", response_model=List[Tuple[str, float]])
+@app.get("/topk_internal", response_model=List[Tuple[int, float]])
 def search_topk_similarity(req: Requirement):
   try:
     query = f'{req.problem}. {req.acceptance_criteria}'
-    return topk_search(query)
+    top = req.top
+    return topk_search(query, top)
   except Exception as e:
     print(f"Unexpected error: {e}")
     raise HTTPException(status_code=500, detail="An unexpected error occurred")

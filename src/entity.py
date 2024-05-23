@@ -34,3 +34,4 @@ class Requirement(BaseModel):
   id: str = Field(alias="_id", default=None)
   problem: str
   acceptance_criteria: str
+  top: int = 20
